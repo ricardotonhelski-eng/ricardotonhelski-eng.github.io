@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Experiências Científicas — Gênio da Garrafa & Maçã vs Suco de Limão</title>
+  <meta name="description" content="Site educativo com instruções passo a passo, explicações científicas, materiais, tabelas de observação, variações e atividades para duas experiências populares: Gênio da Garrafa e por que o suco de limão impede a maçã de escurecer." />
+  <style>
+    /* Reset simples */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.5;margin:0;background:linear-gradient(180deg,#f7fbff,#ffffff);color:#0b213f}
+    header{background:#0b4a6f;color:#fff;padding:28px 20px;border-bottom:6px solid rgba(11,74,111,.12)}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    h1{margin:0;font-size:clamp(1.6rem,2.4vw,2.6rem)}
+    p.lead{opacity:.95}
+    nav{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+    nav a{background:rgba(255,255,255,.08);padding:8px 12px;border-radius:10px;color:#eaf6ff;text-decoration:none;font-weight:600}
+
+    main{padding:28px 0}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:22px}
+    .card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 8px 30px rgba(11,33,60,.06)}
+    .section-title{display:flex;align-items:center;gap:12px}
+    .pill{padding:6px 10px;background:linear-gradient(90deg,#e9f6ff,#fff);border-radius:999px;font-weight:700;color:#03456a}
+
+    /* responsive */
+    @media (max-width:980px){.grid{grid-template-columns:1fr}}
+
+    /* steps */
+    .steps{display:flex;flex-direction:column;gap:12px}
+    .step{padding:12px;border-left:4px solid #0b4a6f;background:linear-gradient(180deg,#fbfeff,#fff);border-radius:8px}
+    .materials{display:flex;flex-wrap:wrap;gap:8px}
+    .mat{background:#f1fbff;padding:6px 8px;border-radius:8px;font-weight:600}
+
+    /* form & data */
+    label{display:block;font-weight:700;margin-top:10px}
+    input[type='number'],input[type='text'],textarea,select{width:100%;padding:8px;border-radius:8px;border:1px solid #d6e9f5;margin-top:6px}
+    button{background:#0b4a6f;color:#fff;padding:10px 12px;border-radius:10px;border:0;font-weight:800;cursor:pointer}
+    small{color:#2b4863}
+
+    footer{padding:20px;text-align:center;color:#294656;opacity:.9}
+
+    /* data table */
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:8px;border:1px solid #e6f0f7;text-align:left}
+    th{background:#f0fbff}
+
+    /* hints */
+    .hint{background:#fffbe6;padding:12px;border-radius:8px;border:1px dashed #ffd27a}
+
+    /* image placeholder */
+    .placeholder{height:180px;border-radius:8px;background:linear-gradient(90deg,#eef7ff,#ffffff);display:flex;align-items:center;justify-content:center;color:#7ea6c6;font-weight:700;border:2px dashed #e1f0fb}
+
+    .qr{display:flex;gap:12px;align-items:center}
+    .qr img{width:120px;height:120px;border-radius:8px;background:#fff;padding:8px}
+    .muted{color:#6b8a9a;font-size:0.95rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Experiências: <span style="color:#ffd166">Gênio da Garrafa</span> & <span style="color:#06d6a0">Maçã vs Suco de Limão</span></h1>
+      <p class="lead">Site completo com: objetivos, materiais, passo a passo, explicação científica, variáveis, guia do professor, fichas de observação e ferramentas para registrar resultados. Feito para imprimir e subir no seu VScode.</p>
+      <nav>
+        <a href="#genio">Gênio da Garrafa</a>
+        <a href="#maca">Maçã vs Suco de Limão</a>
+        
+        
+        <a href="#sobre">Sobre & Créditos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <div>
+        <section class="card" id="intro">
+          <div class="section-title">
+            <div class="pill">Feira de Ciências</div>
+            <h2>Entre Maçãs e Gênios: A Química que se Revela ao Ar</h2>
+          </div>
+          <p>Este site foi criado para complementar o relatório da feira, permitindo que qualquer pessoa possa entender e refazer os experimentos em casa com segurança. Aqui estão explicações, materiais, passos e ciência por trás das duas experiências apresentadas pelo grupo.</p>
+        </section>
+
+        <section id="genio" class="card" style="margin-top:18px">
+          <div class="section-title">
+            <div class="pill">Experimento 1</div>
+            <h2>Gênio da Garrafa — Decomposição da Água Oxigenada</h2>
+          </div>
+          <p>Este experimento demonstra uma reação de decomposição acelerada por um catalisador. Quando o peróxido de hidrogênio (H₂O₂) se decompõe, forma água e oxigênio. Com o uso do permanganato de potássio (KMnO₄), essa reação ocorre de forma rápida e libera calor, produzindo o famoso efeito visual do “gênio” saindo da garrafa.</p>
+
+          <h3>Materiais</h3>
+          <ul>
+            <li>Peróxido de hidrogênio (água oxigenada)</li>
+            <li>Permanganato de potássio (KMnO₄)</li>
+            <li>Garrafa de plástico</li>
+            <li>Funil</li>
+            <li>Luvas e óculos de proteção</li>
+          </ul>
+
+          <h3>Passo a Passo</h3>
+          <ol>
+            <li>Coloque a água oxigenada dentro da garrafa.</li>
+            <li>Com cuidado, adicione uma pequena quantidade de permanganato de potássio.</li>
+            <li>A reação começa imediatamente: um jato de vapor quente se forma e sai da garrafa, criando o efeito visual do “gênio”.</li>
+          </ol>
+
+          <div class="hint">⚠️ Use luvas e óculos. O permanganato pode manchar a pele e o calor liberado é significativo. Só faça com supervisão de um adulto.</div>
+
+          <h3>Explicação Científica</h3>
+          <p>O catalisador acelera a decomposição do H₂O₂ sem ser consumido no processo, liberando oxigênio e calor. O vapor formado carrega pequenas gotículas de água, criando a névoa branca que parece fumaça.</p>
+
+          <div style="width:100%; aspect-ratio:16/9; border-radius:12px; overflow:hidden;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/U8R_X3ExGtQ?si=RhaemiA1JKs-XyeE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+        </section>
+
+        <section id="maca" class="card" style="margin-top:18px">
+          <div class="section-title">
+            <div class="pill">Experimento 2</div>
+            <h2>Maçã que Escurece vs Suco de Limão</h2>
+          </div>
+          <p>Este experimento demonstra o processo de oxidação enzimática, que faz a maçã escurecer ao entrar em contato com o oxigênio do ar. O suco de limão, rico em ácido cítrico e vitamina C, reduz o pH e age como antioxidante, retardando esse processo.</p>
+
+          <h3>Materiais</h3>
+          <ul>
+            <li>1 maçã</li>
+            <li>Suco de limão</li>
+            <li>Faca e tábua</li>
+            <li>Pratos ou potes</li>
+          </ul>
+
+          <h3>Passo a Passo</h3>
+          <ol>
+            <li>Corte a maçã em fatias iguais.</li>
+            <li>Separe uma fatia sem tratamento (controle).</li>
+            <li>Em outra fatia, aplique suco de limão.</li>
+            <li>Espere alguns minutos e observe a diferença de escurecimento.</li>
+          </ol>
+
+          <h3>Explicação Científica</h3>
+          <p>A enzima polifenol oxidase acelera a oxidação dos compostos da maçã ao reagirem com o oxigênio. O limão inibe essa reação porque seu ácido reduz o pH e seus antioxidantes reagem antes do oxigênio, protegendo a fruta.</p>
+
+          <div style="width:100%; aspect-ratio:16/9; border-radius:12px; overflow:hidden;">
+  <iframe src="https://www.youtube.com/embed/U8R_X3ExGtQ" style="width:100%; height:100%; border:0;" allowfullscreen></iframe>
+</div>
+        </section>
+
+        <section id="conclusao" class="card" style="margin-top:18px">
+          <div class="section-title"><div class="pill">Conclusão</div><h2>O que aprendemos</h2></div>
+          <p>Os experimentos mostram como fenômenos químicos estão presentes no nosso cotidiano. O “Gênio da Garrafa” destaca a energia liberada em reações de decomposição, enquanto o experimento da maçã evidencia a ação das enzimas e antioxidantes. Ambos revelam como pequenas transformações têm explicações químicas importantes.</p>
+        </section>
+
+        <section id="refs" class="card" style="margin-top:18px">
+          <div class="section-title"><div class="pill">Referências</div><h2>Fontes Utilizadas</h2></div>
+          <p>Referências completas podem ser consultadas no relatório do grupo.</p>
+        </section>
+
+      </div>
+
+      <aside>
+        <!-- seção Fichas removida -->
+
+        
+            <div>
+              <small class="muted">Adicione aqui uma imagem de QR Code gerada por você (ex: /assets/qrcode.png). O QR deve apontar para o arquivo index.html hospedado.</small>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+
+    <!-- Seção Sobre & Créditos adicionada para funcionar com o botão -->
+    <section id="sobre" class="card" style="margin-top:28px">
+      <div class="section-title"><div class="pill">Sobre & Créditos</div><h2>Informações</h2></div>
+      <p>Este site foi criado para complementar a apresentação da Feira de Ciências, permitindo que qualquer pessoa entenda e refaça os experimentos em casa.</p>
+      <p>Conteúdo baseado no relatório oficial do grupo, com explicações simplificadas e foco educativo.</p>
+      <p><strong>Créditos:</strong> Luís Ricardo Tonhelski.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">Feito com ❤️ — Template gerado por ChatGPT. Edite livremente e adapte para sua aula ou feira de ciências.</div>
+  </footer>
+
+  <script>
+    // Protegido com DOMContentLoaded + checagens para evitar erros se elementos não existirem
+    document.addEventListener('DOMContentLoaded', function(){
+      const addBtn = document.getElementById('add');
+      const exportBtn = document.getElementById('export');
+      const tableBody = document.querySelector('#table tbody');
+
+      // função utilitária
+      function escapeHTML(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+      if(addBtn && tableBody){
+        addBtn.addEventListener('click', ()=>{
+          const exp = document.getElementById('exp') ? document.getElementById('exp').value : '—';
+          const obs = document.getElementById('obs') ? document.getElementById('obs').value || 'anônimo' : 'anônimo';
+          const time = document.getElementById('time') ? document.getElementById('time').value || 0 : 0;
+          const score = document.getElementById('score') ? document.getElementById('score').value || '' : '';
+          const notes = document.getElementById('notes') ? document.getElementById('notes').value || '' : '';
+
+          const tr = document.createElement('tr');
+          tr.innerHTML = `<td>${escapeHTML(exp)}</td><td>${escapeHTML(obs)}</td><td>${escapeHTML(time)}</td><td>${escapeHTML(score)}</td><td>${escapeHTML(notes)}</td>`;
+          tableBody.appendChild(tr);
+
+          // limpar alguns campos
+          if(document.getElementById('notes')) document.getElementById('notes').value='';
+          if(document.getElementById('score')) document.getElementById('score').value='';
+        });
+      } else {
+        // se não encontrou os elementos, registra no console para debug, mas não quebra a execução
+        console.warn('Elementos de formulário ou tabela não foram encontrados — addBtn ou tableBody ausente.');
+      }
+
+      if(exportBtn){
+        exportBtn.addEventListener('click', ()=>{
+          const rows = Array.from(document.querySelectorAll('#table tr'));
+          if(rows.length === 0){
+            alert('Não há dados para exportar. Adicione observações antes de exportar.');
+            return;
+          }
+          const csv = rows.map(r => Array.from(r.querySelectorAll('th,td')).map(c => '"'+String(c.innerText).replace(/"/g,'""')+'"').join(',')).join('\n');
+          const blob = new Blob([csv],{type:'text/csv;charset=utf-8;'});
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url; a.download = 'observacoes_experimentos.csv'; document.body.appendChild(a); a.click(); a.remove();
+        });
+      } else {
+        console.warn('Botão export não encontrado.');
+      }
+
+      // testes automáticos simples: adicionar duas linhas de exemplo, mas só se tabela vazia
+      (function addExampleRowsIfEmpty(){
+        const tbody = document.querySelector('#table tbody');
+        if(!tbody) return;
+        if(tbody.children.length === 0){
+          const example = ['Gênio da Garrafa','Aluno Exemplo','0','balão 10 cm','Inicio do experimento'];
+          const tr = document.createElement('tr');
+          tr.innerHTML = example.map(x=>`<td>${escapeHTML(x)}</td>`).join('');
+          tbody.appendChild(tr);
+        }
+      })();
+
+    });
+  </script>
+</body>
+</html>
